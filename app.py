@@ -506,12 +506,12 @@ if app_mode == "Patient Assessment":
                             st.markdown(f"<div class='prediction-card'>{rec}</div>", unsafe_allow_html=True)
                     
                     # Risk Interpretation
+                                        # Risk Interpretation
                     st.markdown("---")
                     st.markdown("#### 🎯 Risk Stratification")
                     
                     if recurrence_prob < 0.1:
-                        st.success("**Very Low Risk (
-                                                           st.success("**Very Low Risk (<10%)**: Excellent prognosis with standard follow-up")
+                        st.success("**Very Low Risk (<10%)**: Excellent prognosis with standard follow-up")
                     elif recurrence_prob < 0.3:
                         st.info("**Low Risk (10-30%)**: Favorable outcome with routine monitoring")
                     elif recurrence_prob < 0.5:
