@@ -69,65 +69,45 @@ def standardize_age(age):
     return standardized_age
 
 def create_feature_template():
-    """Create a template with all features in the exact order used during training"""
+    """Create template with features in the order from your encoded CSV"""
     feature_template = {
-        'Age': 0,  # This will be standardized
-        
-        # Binary features
+        'Age': 0,
         'Gender_M': 0,
         'Smoking_Yes': 0,
         'Hx Smoking_Yes': 0,
         'Hx Radiothreapy_Yes': 0,
-        'Focality_Uni-Focal': 0,
-        'M_M1': 0,
-        
-        # Thyroid Function (one-hot) - Clinical Hyperthyroidism is reference (dropped)
         'Thyroid Function_Clinical Hypothyroidism': 0,
         'Thyroid Function_Euthyroid': 0,
         'Thyroid Function_Subclinical Hyperthyroidism': 0,
         'Thyroid Function_Subclinical Hypothyroidism': 0,
-        
-        # Physical Examination (one-hot) - Diffuse goiter is reference (dropped)
         'Physical Examination_Multinodular goiter': 0,
         'Physical Examination_Normal': 0,
         'Physical Examination_Single nodular goiter-left': 0,
         'Physical Examination_Single nodular goiter-right': 0,
-        
-        # Adenopathy (one-hot) - Bilateral is reference (dropped)
         'Adenopathy_Extensive': 0,
         'Adenopathy_Left': 0,
         'Adenopathy_No': 0,
         'Adenopathy_Posterior': 0,
         'Adenopathy_Right': 0,
-        
-        # Pathology (one-hot) - Follicular is reference (dropped)
         'Pathology_Hurthel cell': 0,
         'Pathology_Micropapillary': 0,
         'Pathology_Papillary': 0,
-        
-        # Risk (one-hot) - High is reference (dropped)
+        'Focality_Uni-Focal': 0,
         'Risk_Intermediate': 0,
         'Risk_Low': 0,
-        
-        # T Stage (one-hot) - T1a is reference (dropped)
         'T_T1b': 0,
         'T_T2': 0,
         'T_T3a': 0,
         'T_T3b': 0,
         'T_T4a': 0,
         'T_T4b': 0,
-        
-        # N Stage (one-hot) - N0 is reference (dropped)
         'N_N1a': 0,
         'N_N1b': 0,
-        
-        # Stage (one-hot) - I is reference (dropped)
+        'M_M1': 0,
         'Stage_II': 0,
         'Stage_III': 0,
         'Stage_IVA': 0,
         'Stage_IVB': 0,
-        
-        # Response (one-hot) - Biochemical Incomplete is reference (dropped)
         'Response_Excellent': 0,
         'Response_Indeterminate': 0,
         'Response_Structural Incomplete': 0
